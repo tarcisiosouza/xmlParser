@@ -27,7 +27,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ReadXMLFile {
+public class ReadXMLFileSolrFormat {
 
 	private static String index;
 	private static String type;                 
@@ -42,7 +42,7 @@ public class ReadXMLFile {
 	  index  = "souza_livingknowledge";
       type   = "capture";
       client = getTransportClient("master02.ib", 9350);
-      walk ("/home/souza/temporalia/im1c8.internetmemory.org/lk/solr");
+      walk ("/Volumes/Priest/Temporalia");
      
 }
   
