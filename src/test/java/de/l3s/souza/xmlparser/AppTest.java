@@ -1,5 +1,7 @@
 package de.l3s.souza.xmlparser;
 
+import org.junit.runner.RunWith;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

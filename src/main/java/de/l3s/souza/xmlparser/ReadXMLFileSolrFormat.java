@@ -36,7 +36,7 @@ public class ReadXMLFileSolrFormat {
 	private static Map<String, Object> data = new HashMap<String, Object>();
 
 	
-  public static void main(String argv[]) throws ParserConfigurationException, SAXException, IOException {
+  public static void run(String argv[]) throws ParserConfigurationException, SAXException, IOException {
 
        
 	  index  = "souza_livingknowledge";
@@ -102,7 +102,7 @@ public class ReadXMLFileSolrFormat {
 			            	break;
 			            	}
 			               // System.out.println(i+" " + docs.item(i).getTextContent());
-			                
+			         /*       
 			                if (docNumber==7)
 			                {
 			                	docNumber=0;
@@ -110,6 +110,7 @@ public class ReadXMLFileSolrFormat {
 			                	System.out.println((result.isCreated() ? "created" : "updated") + " document " + result.getId() );
 			                	data.clear();
 			                }
+			                */
 			            }
 				}
 			
@@ -117,7 +118,7 @@ public class ReadXMLFileSolrFormat {
 			}
 		}
   public static Client getTransportClient(String host, int port) throws UnknownHostException {
-
+/*
  	 Settings settings = Settings.settingsBuilder()
               .put("client.transport.sniff", true)
              // .put("shield.user", "souza:pri2006")
@@ -127,7 +128,7 @@ public class ReadXMLFileSolrFormat {
  	TransportClient client = TransportClient.builder().settings(settings).build()
              .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(host), port))
      .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(host), port));
- 	
+ */	
  	return client;
  }
   
