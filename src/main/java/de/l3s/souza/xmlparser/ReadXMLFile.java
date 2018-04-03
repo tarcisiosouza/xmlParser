@@ -12,7 +12,7 @@ import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
-import org.elasticsearch.transport.client.PreBuiltTransportClient;
+//import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.junit.runner.RunWith;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -46,21 +46,21 @@ public class ReadXMLFile {
 	private static Map<String, String> data = new HashMap<String, String>();
 	private static BulkRequestBuilder bulkBuilder;
 
-	
+/*	
 	public static void main(String argv[]) throws ParserConfigurationException,
 			SAXException, IOException {
 
 		index = "souza_livingknowledge";
 		type = "capture";
 	//	client = getTransportClient("master02.ib", 9350);
-		client = getTransportClient("master02.ib", 9205);
+		client = getTransportClient("master02.ib", 9305);
 		// 0 walk ("/Volumes/Priest/Temporalia");
 		walk("/home/souza/temporalia/im1c8.internetmemory.org/lk");
 		
 		client.close();
 
 	}
-
+*/
 	private static Pattern TAG_REGEX;
 
 	private static List<String> getTagValues(final String str) {
@@ -263,12 +263,12 @@ public class ReadXMLFile {
 		Settings settings = Settings.builder()
 				.put("client.transport.sniff", true)
 				// .put("shield.user", "souza:pri2006")
-				
+			//	.put("client.transport.ping_timeout", "30s")
 				.put("cluster.name", "kbs-esfive").build();
 		
 		
-		@SuppressWarnings("resource")
-		
+	//	@SuppressWarnings("resource")
+	/*	
 		TransportClient client = new PreBuiltTransportClient(settings)
 				.addTransportAddress(
 						new InetSocketTransportAddress(InetAddress
@@ -276,7 +276,7 @@ public class ReadXMLFile {
 				.addTransportAddress(
 						new InetSocketTransportAddress(InetAddress
 								.getByName(host), port));
-
+*/
 		return client;
 	}
 
